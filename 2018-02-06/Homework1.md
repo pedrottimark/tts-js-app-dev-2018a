@@ -1,4 +1,4 @@
-Homework 1 - 99 Bottles
+# Homework 1 - 99 Bottles
 
 - Using a `for` loop.
 - Write a simple version of "99 bottles of beer on the wall"
