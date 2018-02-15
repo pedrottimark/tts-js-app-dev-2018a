@@ -41,7 +41,7 @@ var toggleItems = function (todoList, subtext) {
 var subtext = process.argv[2];
 
 if (typeof subtext === 'string' && subtext.length !== 0) {
-  var todoListCopy = toggleItems(subtext);
+  var todoListCopy = toggleItems(todoList, subtext);
 
   console.log('Original todo list:\n');
   logTodoItems(todoList);
