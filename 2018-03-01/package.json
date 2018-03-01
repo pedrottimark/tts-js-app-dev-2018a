@@ -1,0 +1,29 @@
+{
+  "name": "lesson-4-functions-part-2",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "eslint": "^4.17.0"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 5,
+      "sourceType": "script"
+    },
+    "env": {
+      "browser": true,
+      "node": true
+    },
+    "extends": [
+      "eslint:recommended"
+    ],
+    "rules": {
+      "indent": ["error", 2],
+      "no-console": "off",
+      "no-undef": "error",
+      "no-unused-vars": "error",
+      "no-use-before-define": "error",
+      "semi": "error"
+    }
+  }
+}
