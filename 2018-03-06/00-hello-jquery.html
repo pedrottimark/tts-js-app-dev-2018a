@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8'/>
+<title>00-hello-jquery</title>
+<style>
+#root {
+  font-size: 5em;
+  margin-top: 40vh;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script>
+var $root = jQuery('#root'); // Find something.
+console.log($root.text()); // Do something: get its text.
+$root.text('Hello, jQuery!'); // Do something: set its text.
+
+console.log($root.length);
+console.log($root[0] === document.querySelector('#root'));
+</script>
+</body>
+</html>
