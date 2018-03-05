@@ -40,9 +40,10 @@ The `jQuery` function is a virtual constructor. `$` is a more concise nickname f
 
 The **type** of argument determines **what** it does:
 
-* `$(selectorString)` **finds** elements: `$('#root')` or `$('li')` or `$('.completed')`
 * `$(markupString)` **creates** elements: `$('<li/>')` or `$('<input type="text"/>')`
+* `$(selectorString)` **finds** elements: `$('#root')` or `$('li')` or `$('.completed')`
 * `$(element)` **wraps** a DOM element: `$(event.target)` or `$(this)`
+* `$(function () {…})` calls function after DOM is ready for JavaScript code to execute.
 
 It always returns an [array-like object](https://learn.jquery.com/using-jquery-core/jquery-object/) that **wraps** a collection of DOM elements:
 
@@ -243,7 +244,7 @@ The `05-app.js` script file has `renderRadio` and `renderFilter` functions which
 
 * To export the `renderApp` function, assign to `renderApp` property of global `window` object, because assignment to an undeclared variable throws an error in strict mode.
 
-* Immediately Invoked Function Expression (IIFE) encapsulates private functions and returns the public function.
+* Immediately Invoked Function Expression (IIFE) encapsulates **private** functions and returns the public function.
 
 In future lessons, you will learn clearer ways to divide and conquer complexity with **modules**.
 
@@ -274,6 +275,32 @@ window.renderApp = (function () {
   };
 
 }());
+```
+
+The `index.js` file calls `$` with a function argument to solve two problems:
+
+* Call the function **after** the DOM is ready for JavaScript code to execute.
+* Encapsulate **private** variables in the closure.
+
+```js
+'use strict';
+
+$(function () {
+  var receivedString = [
+    '{',
+    '"visibilityFilter":"all",',
+    '"todos":[',
+    '{"completed":true,"text":"Render <strong>markup</strong> from data"},',
+    '{"completed":false,"text":"Add <strong>interactive</strong> behavior to rendered markup"},',
+    '{"completed":false,"text":"Call <code>find</code> method with selector string"}',
+    ']',
+    '}',
+  ].join('');
+
+  var state = JSON.parse(receivedString);
+
+  $('#root').append(renderApp(state, logic));
+});
 ```
 
 ## Add interactive behavior to rendered markup

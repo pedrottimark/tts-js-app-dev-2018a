@@ -1,4 +1,6 @@
-(function () {
+'use strict';
+
+$(function () {
   var receivedString = [
     '{',
     '"visibilityFilter":"all",',
@@ -13,4 +15,4 @@
   var state = JSON.parse(receivedString);
 
   $('#root').append(renderApp(state, logic));
-}());
+});
