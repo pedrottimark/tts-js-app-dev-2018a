@@ -1,0 +1,35 @@
+{
+  "name": "lesson-10-asynchronous-javascript",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "json-server --watch ./copied/db.json --static ./copied"
+  },
+  "devDependencies": {
+    "json-server": "^0.12.1",
+    "eslint": "^4.17.0"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 2017,
+      "sourceType": "script"
+    },
+    "env": {
+      "browser": true,
+      "jquery": true,
+      "node": true,
+      "es6": true
+    },
+    "extends": [
+      "eslint:recommended"
+    ],
+    "rules": {
+      "indent": ["error", 2],
+      "no-console": "off",
+      "no-undef": "error",
+      "no-unused-vars": "error",
+      "no-use-before-define": "error",
+      "semi": "error"
+    }
+  }
+}

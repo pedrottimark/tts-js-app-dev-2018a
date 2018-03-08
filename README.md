@@ -10,10 +10,10 @@ Each directory has example files from the class on that date.
 | 2018-02-15 | 4 | Functions, part 2 |
 | 2018-02-20 | 5 | Functions, part 3 |
 | 2018-02-22 | 6 | Functions and objects |
-| 2018-02-27 | 7 | JavaScrip in the browser |
-| 2018-03-01 | 8 | Document object model |
+| 2018-02-27 | 7 | JavaScript in the browser |
+| 2018-03-01 | 8 | Document Object Model |
 | 2018-03-06 | 9 | jQuery |
-| 2018-03-08 | 10 | AJAX, REST, and promises |
+| 2018-03-08 | 10 | Asynchronous JavaScript |
 | 2018-03-13 | 11 | npm packages |
 | 2018-03-15 | 12 | Webpack |
 | 2018-03-20 | 13 | ECMAScript 2015, part 1 |

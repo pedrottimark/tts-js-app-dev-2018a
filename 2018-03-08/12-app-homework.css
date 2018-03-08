@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.TodoList {
+  padding: 1em;
+}
+
+.TodoList .list {
+  padding: 1em;
+  padding-right: 0;
+  line-height: 1.5em;
+}
+
+.TodoList .list li {
+  cursor: default;
+  padding-right: 1em;
+}
+
+.TodoList .adder button,
+.TodoList .adder input,
+.TodoList .list li.uncompleted:hover {
+  background-color: #f0fff0;
+}
+
+.TodoList .list li.completed:hover {
+  background-color: #f0f0f0;
+}
+
+.TodoList .adder input,
+.TodoList .uncompleted,
+.TodoList .visibility label.uncompleted,
+.TodoList .list li.uncompleted {
+  color: #008000; /* green */
+}
+
+.TodoList .visibility label.completed,
+.TodoList .list li.completed {
+  color: #cccccc; /* gray */
+  text-decoration: line-through;
+}
+
+.TodoList .list.completed li.uncompleted,
+.TodoList .list.uncompleted li.completed {
+  display: none;
+}
+
+.TodoList .visibility {
+  display: flex;
+  list-style: none;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #cccccc;
+}
+
+.TodoList .visibility label + label {
+  margin-left: 1em;
+}
+
+.TodoList .visibility input {
+  margin-right: 0.5em;
+}
+
+.TodoList .adder {
+  display: flex;
+  line-height: 1.5em;
+  border-top: 1px solid #cccccc;
+  padding-top: 1em;
+}
+
+.TodoList .adder input {
+  flex-grow: 1;
+  max-width: 20em;
+  border: 1px solid #cccccc;
+  font-family: inherit;
+  font-size: inherit;
+  padding-left: 1em;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+.TodoList .adder button {
+  flex-grow: 0;
+  border: 1px solid #cccccc;
+  border-radius: 0.25em;
+  font-family: inherit;
+  font-size: inherit;
+  margin-left: 1em;
+  padding: 0.5em;
+}
