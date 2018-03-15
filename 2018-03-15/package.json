@@ -1,0 +1,50 @@
+{
+  "name": "lesson-12-javascript-tools-2",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build": "webpack",
+    "start": "json-server --watch ./db/db.json --static ./dist",
+    "test": "jest"
+  },
+  "dependencies": {
+    "jquery": "^3.3.1"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.10",
+    "eslint": "^4.17.0",
+    "file-loader": "^1.1.11",
+    "jest": "^22.4.2",
+    "json-server": "^0.12.1",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.12"
+  },
+  "eslintConfig": {
+    "parserOptions": {
+      "ecmaVersion": 2017,
+      "sourceType": "script"
+    },
+    "env": {
+      "browser": true,
+      "jest": true,
+      "jquery": true,
+      "node": true,
+      "es6": true
+    },
+    "extends": [
+      "eslint:recommended"
+    ],
+    "rules": {
+      "indent": [
+        "error",
+        2
+      ],
+      "no-console": "off",
+      "no-undef": "error",
+      "no-unused-vars": "error",
+      "no-use-before-define": "error",
+      "semi": "error"
+    }
+  }
+}

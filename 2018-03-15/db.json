@@ -1,0 +1,48 @@
+{
+  "doers": [
+    {
+      "id": "pedrottimark",
+      "todos": [
+        {
+          "id": 0,
+          "completed": true,
+          "text": "Read server code that responds to `GET` and `POST` requests."
+        },
+        {
+          "id": 2,
+          "completed": false,
+          "text": "Call `fetch` to make `GET`, `PUT`, and `POST` requests."
+        },
+        {
+          "id": 3,
+          "completed": false,
+          "text": "Write promise chains to handle success or failure of `fetch` requests."
+        },
+        {
+          "id": 4,
+          "completed": false,
+          "text": "Rewrite promise chains with `async` and `await` keywords."
+        },
+        {
+          "id": 5,
+          "completed": false,
+          "text": "To do or not to do"
+        }
+      ]
+    },
+    {
+      "id": "asynchronizer",
+      "todos": [
+        {
+          "id": 1,
+          "completed": false,
+          "text": "Read and write requests which apply the REST API pattern."
+        }
+      ]
+    },
+    {
+      "id": "jester",
+      "todos": []
+    }
+  ]
+}
