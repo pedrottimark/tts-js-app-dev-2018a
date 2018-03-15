@@ -14,8 +14,8 @@ Each directory has example files from the class on that date.
 | 2018-03-01 | 8 | Document Object Model |
 | 2018-03-06 | 9 | jQuery |
 | 2018-03-08 | 10 | Asynchronous JavaScript |
-| 2018-03-13 | 11 | npm packages |
-| 2018-03-15 | 12 | Webpack |
+| 2018-03-13 | 11 | JavaScript tools, part 1 |
+| 2018-03-15 | 12 | JavaScript tools, part 2 |
 | 2018-03-20 | 13 | ECMAScript 2015, part 1 |
 | 2018-03-22 | 14 | ECMAScript 2015, part 2 |
 | 2018-03-27 | 15 | React, part 1 |
