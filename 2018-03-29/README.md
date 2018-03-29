@@ -259,6 +259,14 @@ Change roles: work “from the top down” in our second challenge to delete a t
 
 7. Look for absence of deleted items in the `db.json` file in `db` subdirector.
 
+## Controlled components
+
+> In HTML, form elements such as `input`, `textarea`, and `select` typically maintain their own state and update it based on user input. In React, mutable state is typically kept in the state property of components, and only updated with setState().
+
+> We can combine the two by making the React state be the “single source of truth”. Then the React component that renders a form also controls what happens in that form on subsequent user input. An input form element whose value is controlled by React in this way is called a “controlled component”.
+
+> With a controlled component, every state mutation will have an associated handler function. This makes it straightforward to modify or validate user input.
+
 ## Challenge 3 changeCompletedness
 
 Change roles: work “from the top down” in our next challenge to change the completedness filter when you click a radio button.
