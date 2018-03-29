@@ -1,0 +1,92 @@
+{
+  "doers": [
+    {
+      "id": "lesson12",
+      "completedness": "all",
+      "todos": [
+        {
+          "id": 0,
+          "completed": true,
+          "text": "Replace global scope in scripts with module export, import, and scope in CommonJS."
+        },
+        {
+          "id": 1,
+          "completed": true,
+          "text": "Replace multiple code, style, and image files with one bundle."
+        },
+        {
+          "id": 2,
+          "completed": true,
+          "text": "Write unit tests for pure functions."
+        }
+      ]
+    },
+    {
+      "id": "lesson14",
+      "completedness": "all",
+      "todos": [
+        {
+          "id": 0,
+          "completed": true,
+          "text": "Rewrite CommonJS modules as ECMAScript modules."
+        },
+        {
+          "id": 1,
+          "completed": false,
+          "text": "Delete redundant names in object literals via initializer shorthand."
+        },
+        {
+          "id": 2,
+          "completed": false,
+          "text": "Rewrite multiple occurrences of dot notation as object destructuring."
+        },
+        {
+          "id": 3,
+          "completed": false,
+          "text": "Rewrite multiple occurrences of bracket notation as array destructuring.."
+        },
+        {
+          "id": 4,
+          "completed": false,
+          "text": "Replace array methods with <code>...</code> spread operator for pure update."
+        },
+        {
+          "id": 5,
+          "completed": false,
+          "text": "Replace <code>Object.assign</code> with <code>...</code> spread operator for pure update."
+        },
+        {
+          "id": 6,
+          "completed": false,
+          "text": "Move constructor and prototype functions into the class body."
+        }
+      ]
+    },
+    {
+      "id": "lesson16",
+      "completedness": "all",
+      "todos": [
+        {
+          "id": 0,
+          "completed": false,
+          "text": "Bind event handlers in class and function components."
+        },
+        {
+          "id": 1,
+          "completed": false,
+          "text": "Write callback functions to update the state of ancestor components."
+        },
+        {
+          "id": 2,
+          "completed": false,
+          "text": "Control the state of form components."
+        },
+        {
+          "id": 3,
+          "completed": false,
+          "text": "Compose components to reuse code and separate concerns."
+        }
+      ]
+    }
+  ]
+}

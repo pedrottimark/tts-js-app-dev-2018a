@@ -1,0 +1,298 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.TodoList {
+  font-family: sans-serif;
+  line-height: 1.5rem;
+}
+
+header {
+  display: flex;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-width: 1px;
+  border-color: hsl(0, 0%, 80%); /* light gray */
+  border-bottom-style: solid;
+}
+
+header div {
+  flex-grow: 1;
+}
+
+header div + div {
+  flex-grow: 0;
+}
+
+h1 {
+  font-size: 1em;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+h1 span.name {
+  font-weight: bold;
+}
+
+.completedness {
+  display: flex;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  margin-bottom: 0.5em;
+}
+
+.completedness label + label {
+  margin-left: 1em;
+}
+
+.completedness input {
+  margin-right: 0.5em;
+}
+
+form.logOn,
+form.signUp {
+  margin-bottom: 0.5em;
+}
+
+button.logOff {
+  margin-bottom: 2.5em;
+}
+
+form.logOn input,
+form.logOn button,
+form.signUp input,
+form.signUp button,
+button.logOff {
+  border-width: 1px;
+  border-style: solid;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+form.logOn input,
+form.signUp input {
+  border-top-left-radius: 0.25em;
+  border-bottom-left-radius: 0.25em;
+  width: 12.5em;
+}
+
+header button {
+  width: 5em;
+}
+
+form.logOn button,
+form.signUp button {
+  border-top-right-radius: 0.25em;
+  border-bottom-right-radius: 0.25em;
+  margin-left: 0.5em;
+}
+
+button.logOff {
+  border-radius: 0.25em;
+}
+
+form.logOn input,
+form.logOn button {
+  color: hsl(165, 100%, 25%); /* green-ish */
+  background-color: hsl(165, 100%, 95%);
+}
+
+form.logOn input {
+  border-color: hsl(0, 0%, 80%); /* light gray */
+}
+
+form.logOn button {
+  border-color: hsl(165, 100%, 25%);
+}
+
+form.signUp input,
+form.signUp button {
+  color: hsl(165, 100%, 25%); /* green-ish */
+  background-color: hsl(75, 100%, 90%); /* light yellow-ish */
+}
+
+form.signUp input {
+  border-color: hsl(0, 0%, 80%); /* light gray */
+}
+
+form.signUp button {
+  border-color: hsl(165, 100%, 25%);
+}
+
+form.logOn.error input,
+form.signUp.error input {
+  background-color: hsl(45, 100%, 90%); /* orange-ish */
+}
+
+button.logOff {
+  background-color: hsl(0, 0%, 95%); /* ligher gray */
+  border-color: hsl(0, 0%, 80%); /* light gray */
+}
+
+.TodoList:not(.on) main {
+  text-align: right;
+  background-image: url('off.jpg');
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+}
+
+svg {
+  margin-right: 20em;
+  width: 50%;
+}
+
+main {
+  position: relative;
+}
+
+.modalDialog {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 1em;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 10em;
+  color: #ffff00; /* yellow */
+  background-color: hsla(0, 0%, 0%, 0.5); /* 50% black */
+}
+
+.modalDialog button:last-child {
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+  border-width: 1px;
+  border-radius: 0.25em;  
+  border-style: solid;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  color: #ffff00; /* yellow */
+  background-color: #000000; /* black */
+}
+
+.list {
+  padding-left: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  line-height: 1.5rem;
+}
+
+.list li {
+  cursor: default;
+  margin-right: 1rem;
+}
+
+.list li div {
+  display: flex;
+  align-items: baseline;
+}
+
+.list li p {
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin-right: 1rem;
+}
+
+.list li button {
+  flex-grow: 0;
+  flex-shrink: 0;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  font-family: inherit;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  width: 5rem;
+  color: hsl(15, 100%, 60%); /* red-ish */
+  border-color: hsl(15, 100%, 60%); /* red-ish */
+  background-color: hsl(15, 100%, 95%); /* light red-ish */
+}
+
+.adder button,
+.adder input,
+.list li.uncompleted:hover {
+  background-color: hsl(165, 100%, 95%); /* light green-ish */
+}
+
+.list li.completed:hover {
+  background-color: hsl(0, 0%, 95%); /* ligher gray */
+}
+
+.adder input,
+.adder button,
+.uncompleted,
+.completedness label.uncompleted,
+.list li.uncompleted {
+  color: hsl(165, 100%, 25%); /* green-ish */
+}
+
+.completedness label.completed,
+.list li.completed {
+  color: hsl(0, 0%, 80%); /* light gray */
+}
+
+.completedness label.completed,
+.list li.completed p {
+  text-decoration: line-through;
+}
+
+.list.completed li.uncompleted,
+.list.uncompleted li.completed {
+  display: none;
+}
+
+.adder {
+  display: flex;
+  line-height: 1.5em;
+  border-top: 1px solid hsl(0, 0%, 80%); /* light gray */
+  padding-top: 0.5em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.adder input,
+.adder button {
+  border-width: 1px;
+  border-style: solid;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  color: hsl(165, 100%, 25%); /* green-ish */
+  background-color: hsl(165, 100%, 95%);
+}
+
+.adder input {
+  flex-grow: 1;
+  flex-shrink: 1;
+  max-width: 24em;
+  border-color: hsl(0, 0%, 80%); /* light gray */
+  padding-left: 1em;
+  padding-right: 0.5em;
+}
+
+.adder button {
+  flex-grow: 0;
+  flex-shrink: 0;
+  border-color: hsl(165, 100%, 25%); /* green-ish */
+  border-radius: 0.25em;
+  margin-left: 1em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  width: 5em;
+}
