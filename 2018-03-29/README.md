@@ -20,27 +20,17 @@ To add a new feature to a Web or mobile application, you might change any of the
 
 4. Change to the **child** directory: `cd todo-react-2`
 
-5. Install dependencies: `npm install --save classnames`
+5. Install dependencies: `npm install classnames json-server`
 
 6. Copy files **from** your clone of the class repository **to** the new application:
 
-    * Command prompt in Microsoft Windows:
+    * In an Explorer or Finder window, copy the `db.json` file in the `db` subdirectory of the `2018-03-29` subdirectory in your clone of the class repository
 
-        ```sh
-        mkdir db
-        copy path_to_your_clone/tts-js-app-dev-2018a/2018-03-29/db/db.json db
+        In another Explorer or Finder window, make a new `db` subdirectory in the new `todo-react-2` application, and then paste the `db.json` file in the `db` subdirectory
 
-        copy path_to_your_clone/tts-js-app-dev-2018a/2018-03-29/src/*.* src
-        ```
+    * In the first Explorer or Finder window, copy all the files in the `src` subdirectory in the `2018-03-29` subdirectory in your clone of the class repository
 
-    * Shell in Linux or Terminal in Apple macOS:
-
-        ```sh
-        mkdir db
-        cp path_to_your_clone/tts-js-app-dev-2018a/2018-03-29/db/db.json db
-
-        cp path_to_your_clone/tts-js-app-dev-2018a/2018-03-29/src/*.* src
-        ```
+        In the second Explorer or Finder window, paste the files in the `src` subdirectory in the new `todo-react-2` application, and then confirm that you are replacing some of the existing files
 
 7. Open the `todo-react-2` directory in your code editor
 
@@ -253,7 +243,7 @@ Change roles: work “from the top down” in our second challenge to delete a t
 
 4. Save your changes.
 
-5. If Console pane in browser does not display errors, log on as any of the following: `lesson10`, `lesson12`, `lesson14`, `lesson16`
+5. If Console pane in browser does not display errors, log on as any of the following: `lesson12`, `lesson14`, `lesson16`
 
 6. Click Delete button of some todo items
 
@@ -317,7 +307,7 @@ Change roles: work “from the top down” in our next challenge to change the c
 
 3. Save your changes
 
-4. If Console pane in browser does not display errors, log on as any of the following: `lesson10`, `lesson12`, `lesson14`, `lesson16`
+4. If Console pane in browser does not display errors, log on as any of the following: `lesson12`, `lesson14`, `lesson16`
 
 5. Click radio buttons
 
@@ -386,7 +376,7 @@ Change roles: work “from the bottom up” in our next challenge to add a todo 
 
 3. Save your changes.
 
-4. If Console pane in browser does not display errors, log on as any of the following: `lesson10`, `lesson12`, `lesson14`, `lesson16`
+4. If Console pane in browser does not display errors, log on as any of the following: `lesson12`, `lesson14`, `lesson16`
 
 5. Type text of new item in the box, and then either click the Add button or press Enter or Return
 
@@ -409,7 +399,7 @@ In pairs: work “from the top down” in our last challenge to display a modal 
     * Add a callback method to update state when you click to close the modal dialog box:
 
         ```js
-        onCloseModal() {
+        onCloseModalBox() {
           this.setState({
             modal: false,
           });
@@ -425,10 +415,10 @@ In pairs: work “from the top down” in our last challenge to display a modal 
         ```js
         {
           this.state.modal && (
-            <ModalDialog onClick={this.onCloseModal}>
+            <ModalBox onClick={this.onCloseModalBox}>
               <p>Before you can do what you signed up to do</p>
               <p>Here is what matters to me but not to you</p>
-            </ModalDialog>
+            </ModalBox>
           )
         }
         ```
