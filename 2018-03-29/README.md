@@ -427,6 +427,7 @@ In pairs: work “from the top down” in our last challenge to display a modal 
 
 ## Homework
 
+* Read [React Components, Elements, and Instances](https://reactjs.org/blog/2015/12/18/react-components-elements-and-instances.html)
 * Read [Thinking in React](https://reactjs.org/docs/thinking-in-react.html)
 * Read [Handling Events](https://reactjs.org/docs/handling-events.html)
 * Read [Component State](https://reactjs.org/docs/faq-state.html)
