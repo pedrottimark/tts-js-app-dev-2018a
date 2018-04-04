@@ -1,6 +1,11 @@
-const myfunc = fn => param => obj => fn(obj[param]);
+const myfunc = fn => {
+  return param => {
+    return obj => fn(obj[param]);
+  };
+};
 
-myfunc(console.log)("a")({ a: "test", b: "a" });
+const logger = myfunc(console.log);
+const aLogger = logger("a");
+aLogger({ a: "test", b: "a" });
 
-
-console.log(3 + +"3") // 6
+console.log(3 + +3); // 6

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import Lifecyle from "./Lifecycle";
+import Profile from "./Lifecycle";
 
 // Create a stateful react component by inheriting from Component
 class App extends Component {
@@ -10,8 +10,8 @@ class App extends Component {
     super();
     // set the initial state
     this.state = {
-      inputValue: "2",
-      displayValue: 4,
+      inputValue: "",
+      displayValue: "",
     };
     // Setting our callback contexts
     this.onSet = this.onSet.bind(this);
@@ -26,20 +26,14 @@ class App extends Component {
     }));
   }
 
-  // Sets input value state if event value is < 11
   onChange(event) {
     // Dereferencing the event value (makes it more constant/immutable);
     // the event value may change
     const value = event.target.value;
 
-    // Checking if we should update value
-    if (Number(value) < 11) {
-      // Set the inputValue state to be the event value
-      // Synchronous setState syntax
-      this.setState({
-        inputValue: value,
-      });
-    }
+    this.setState({
+      inputValue: value,
+    });
   }
 
   render() {
@@ -59,9 +53,9 @@ class App extends Component {
         >
           Set Display
         </button>
-        <Lifecyle
+        <Profile
           // Pass display value to Lifecycle component
-          message={this.state.displayValue}
+          username={this.state.displayValue}
         />
       </div>
     );
