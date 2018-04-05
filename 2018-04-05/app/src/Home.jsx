@@ -1,7 +1,6 @@
 import React, {Component} from "react"
 
 import Profile from "./Profile";
-import Post from "./Post"
 
 // Create a stateful react component by inheriting from Component
 export default class Home extends Component {
