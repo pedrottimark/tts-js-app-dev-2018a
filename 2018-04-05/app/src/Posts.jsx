@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from "react";
+import { Link } from "react-router-dom";
 
 export default class Posts extends Component {
   constructor() {
@@ -35,8 +36,10 @@ export default class Posts extends Component {
       <Fragment>
         <h3>Posts</h3>
         <ul>
-          {this.state.posts.map(album => (
-            <li key={album.id}>{album.title}</li>
+          {this.state.posts.map(post => (
+            <li key={post.id}>
+              <Link to={`/post/${post.id}`}>{post.title}</Link>
+            </li>
           ))}
         </ul>
       </Fragment>

@@ -8,6 +8,26 @@ export default class Posts extends Component {
     };
   }
 
+  getAlbums(userId) {
+    fetch(`https://jsonplaceholder.typicode.com/albums?userId=${userId}`, {
+      mode: "cors",
+    })
+      .then(res => res.json())
+      .then(albums => {
+        this.setState({ albums });
+      });
+  }
+
+  componentDidMount(){
+      this.getAlbums(this.props.userId);
+  }
+
+  componentDidUpdate(prevProps){
+    if(prevProps.userId !== this.props.userId){
+        this.getAlbums(this.props.userId);
+    }
+  }
+
   render() {
     return (
       <Fragment>

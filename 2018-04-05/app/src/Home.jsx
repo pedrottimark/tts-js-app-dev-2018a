@@ -1,10 +1,9 @@
-import React, {Component} from "react"
+import React, { Component } from "react";
 
-import Profile from "./Profile";
 
 // Create a stateful react component by inheriting from Component
 export default class Home extends Component {
-    // Intial component setup
+  // Intial component setup
   constructor() {
     // Calls the Component constructor (always required)
     super();
@@ -21,9 +20,10 @@ export default class Home extends Component {
   // Sets display value to input value
   onSet() {
     // Async setState signature (uses a function)
-    this.setState(prevState => ({
-      displayValue: prevState.inputValue,
-    }));
+    // this.setState(prevState => ({
+    //   displayValue: prevState.inputValue,
+    // }));
+    this.props.onSearch(this.state.inputValue);
   }
 
   onChange(event) {
@@ -46,6 +46,7 @@ export default class Home extends Component {
           value={this.state.inputValue}
           // updates state when the user types
           onChange={this.onChange}
+          placeholder="Type username"
         />
         <button
           // Triggers inputValue -> displayValue
@@ -53,10 +54,6 @@ export default class Home extends Component {
         >
           Look Up User
         </button>
-        <Profile
-          // Pass display value to Lifecycle component
-          username={this.state.displayValue}
-        />
       </div>
     );
   }

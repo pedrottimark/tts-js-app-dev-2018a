@@ -23,6 +23,10 @@ export default class Profile extends Component {
       });
   }
 
+  componentDidMount(){
+    this.getUser(this.props.username);
+  }
+
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.username !== this.props.username) {
       // Update user
