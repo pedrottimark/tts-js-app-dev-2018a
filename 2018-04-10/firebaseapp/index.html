@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Firebase App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+    <h1>Firebase Demo App</h1>
+    <h3>Computer Age</h3>
+    <p id="message"></p>
+    <input type="text" name="message" id="messageInput">
+    <button id="sendButton">Send</button>
+
+    <script src="https://www.gstatic.com/firebasejs/4.0.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAB5a6qZ05AXMXERnsLTHSh91tnGnHZHb0",
+            authDomain: "test-awesome-project-be8ef.firebaseapp.com",
+            databaseURL: "https://test-awesome-project-be8ef.firebaseio.com",
+            projectId: "test-awesome-project-be8ef",
+            storageBucket: "",
+            messagingSenderId: "397480137984"
+        };
+        firebase.initializeApp(config);
+
+        var message = document.getElementById('message');
+        var messageInput = document.getElementById('messageInput');
+        var sendButton = document.getElementById("sendButton");
+
+        var dbRef = firebase.database().ref();
+
+        dbRef.child('message').on('value', (snapshot) => message.innerText = snapshot.val())
+
+        sendButton.addEventListener("click", () => {
+            dbRef.update({
+                message: messageInput.value,
+            })
+        })
+
+        // dbRef.update({
+        //     student: {
+        //         name: "Andy",
+        //         friend: "Doug"
+        //     }
+        // })
+    </script>
+</body>
+
+</html>

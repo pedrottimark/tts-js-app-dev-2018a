@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Firebase App</h1>
+    <p id="message"></p>
+    <input type="text" name="message" id="messageInput">
+    <button id="sendMessage">Send</button>
+
+    <script src="https://www.gstatic.com/firebasejs/4.5.2/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyC6JMw4N6CM9cOoEvVnMkzo7-qRFsCEey4",
+            authDomain: "ttsdemo-37b84.firebaseapp.com",
+            databaseURL: "https://ttsdemo-37b84.firebaseio.com",
+            projectId: "ttsdemo-37b84",
+            storageBucket: "ttsdemo-37b84.appspot.com",
+            messagingSenderId: "11268229908"
+        };
+        firebase.initializeApp(config);
+
+        var message = document.getElementById('message');
+        var messageInput = document.getElementById('messageInput');
+        var sendButton = document.getElementById("sendMessage");
+
+        var dbRef = firebase.database().ref();
+
+        dbRef.child("message").on('value', snapshot => { message.innerHTML = snapshot.val() })
+
+        sendButton.addEventListener("click", () => {
+            const message = messageInput.value
+
+            dbRef.update({
+                message,
+            })
+        })
+    </script>
+</body>
+
+</html>
