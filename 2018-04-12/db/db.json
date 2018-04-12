@@ -1,0 +1,130 @@
+{
+  "doers": [
+    {
+      "id": "lesson14",
+      "list": [
+        {
+          "id": 0,
+          "completed": true,
+          "text": "Rewrite CommonJS modules as ECMAScript modules.",
+          "timeAdded": "2018-03-22T10:00:00.000Z"
+        },
+        {
+          "id": 1,
+          "completed": false,
+          "text": "Delete redundant names in object literals via initializer shorthand.",
+          "timeAdded": "2018-03-22T11:00:00.000Z"
+        },
+        {
+          "id": 2,
+          "completed": false,
+          "text": "Rewrite multiple occurrences of dot notation as object destructuring.",
+          "timeAdded": "2018-03-22T12:00:00.000Z"
+        },
+        {
+          "id": 3,
+          "completed": false,
+          "text": "Rewrite multiple occurrences of bracket notation as array destructuring..",
+          "timeAdded": "2018-03-22T13:00:00.000Z"
+        },
+        {
+          "id": 4,
+          "completed": false,
+          "text": "Replace array methods with <code>...</code> spread operator for pure update.",
+          "timeAdded": "2018-03-22T14:00:00.000Z"
+        },
+        {
+          "id": 5,
+          "completed": false,
+          "text": "Replace <code>Object.assign</code> with <code>...</code> spread operator for pure update.",
+          "timeAdded": "2018-03-22T15:00:00.000Z"
+        },
+        {
+          "id": 6,
+          "completed": false,
+          "text": "Move constructor and prototype functions into the class body.",
+          "timeAdded": "2018-03-22T16:00:00.000Z"
+        }
+      ],
+      "view": {
+        "completedness": "all",
+        "matching": "",
+        "sorting": "newerFirst"
+      }
+    },
+    {
+      "id": "lesson16",
+      "list": [
+        {
+          "id": 0,
+          "completed": false,
+          "text": "Bind event handlers in class and function components.",
+          "timeAdded": "2018-03-26T08:00:00.000Z"
+        },
+        {
+          "id": 1,
+          "completed": false,
+          "text": "Write callback functions to update the state of ancestor components.",
+          "timeAdded": "2018-03-27T08:00:00.000Z"
+        },
+        {
+          "id": 2,
+          "completed": false,
+          "text": "Control the state of form components.",
+          "timeAdded": "2018-03-28T08:00:00.000Z"
+        },
+        {
+          "id": 3,
+          "completed": false,
+          "text": "Compose components to reuse code and separate concerns.",
+          "timeAdded": "2018-03-29T08:00:00.000Z"
+        }
+      ],
+      "view": {
+        "completedness": "all",
+        "matching": "",
+        "sorting": "newerFirst"
+      }
+    },
+    {
+      "id": "lesson20",
+      "list": [
+        {
+          "id": 0,
+          "completed": false,
+          "text": "Move some application state from React components to Redux store.",
+          "timeAdded": "2018-04-06T08:00:00.000Z"
+        },
+        {
+          "id": 1,
+          "completed": false,
+          "text": "Map action creator functions and state to props in “connected” components.",
+          "timeAdded": "2018-04-09T08:00:00.000Z"
+        },
+        {
+          "id": 2,
+          "completed": false,
+          "text": "Write action creator functions.",
+          "timeAdded": "2018-04-10T08:00:00.000Z"
+        },
+        {
+          "id": 3,
+          "completed": false,
+          "text": "Write cases of <code>switch</code> statement in reducer functions.",
+          "timeAdded": "2018-04-11T08:00:00.000Z"
+        },
+        {
+          "id": 4,
+          "completed": false,
+          "text": "Read test for reducer function.",
+          "timeAdded": "2018-04-12T08:00:00.000Z"
+        }
+      ],
+      "view": {
+        "completedness": "all",
+        "matching": "",
+        "sorting": "newerFirst"
+      }
+    }
+  ]
+}

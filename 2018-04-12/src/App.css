@@ -1,0 +1,317 @@
+.TodoList {
+  line-height: 1.5rem;
+}
+
+header {
+  display: flex;
+  align-items: baseline;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-width: 1px;
+  border-color: hsl(0, 0%, 80%); /* light gray */
+  border-bottom-style: solid;
+}
+
+.TodoList.off header {
+  justify-content: flex-end;
+}
+
+.list time,
+.list button,
+header > div {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
+header > div {
+  flex-grow: 0;
+}
+
+.TodoList.on header > div:first-child {
+  flex-grow: 1;
+}
+
+h1 {
+  font-size: 1rem;
+  font-weight: normal;
+  margin-left: 1.5rem;
+}
+
+h1 span.name,
+h1 span.uncompleted {
+  font-weight: bold;
+}
+
+.logOn,
+.matching,
+h1 {
+  margin-bottom: 0.5rem;
+}
+
+.logOn input,
+.logOn button,
+.signUp input,
+.signUp button,
+.logOff button,
+.adder input,
+.adder button,
+.matching input {
+  border-width: 1px;
+  border-style: solid;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.logOn input,
+.signUp input,
+.adder input {
+  border-top-left-radius: 0.25rem;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.logOn input,
+.signUp input {
+  width: 12.5rem;
+}
+
+button {
+  width: 5rem;
+  border-color: hsl(0, 0%, 50%); /* gray */
+}
+
+input + button {
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  margin-left: 0.5rem;
+}
+
+.matching input,
+.logOff button {
+  border-radius: 0.25em;
+}
+
+.logOn input,
+.logOn button {
+  color: hsl(165, 100%, 25%); /* green-ish */
+  background-color: hsl(165, 100%, 95%); /* lighter green-ish */
+}
+
+.logOn button,
+.signUp button,
+.adder button {
+  border-color: hsl(165, 100%, 25%);
+}
+
+.signUp input,
+.signUp button {
+  color: hsl(165, 100%, 25%); /* green-ish */
+  background-color: hsl(165, 100%, 90%); /* light green-ish */
+  font-weight: bold;
+}
+
+.logOn.error input,
+.signUp.error input {
+  background-color: hsl(45, 100%, 90%); /* orange-ish */
+}
+
+form.matching input {
+  box-sizing: border-box;
+  width: 100%;
+  padding-left: 1.125em;
+  background-color: hsl(0, 0%, 95%); /* lighter gray */
+}
+
+input[type="text"] {
+  border-color: hsl(0, 0%, 80%); /* light gray */
+}
+
+.completedness {
+  display: flex;
+}
+
+.completedness label + label {
+  margin-left: 1em;
+}
+
+form.sorting {
+  display: flex;
+  flex-direction: column;
+}
+
+form.sorting label + label {
+  margin-top: 0.5rem;
+}
+
+form.sorting label {
+  width: 7.375rem;
+  padding-left: 1.125rem;
+}
+
+form.completedness label,
+form.sorting label {
+  padding-left: 1.125rem;
+  position: relative;
+}
+
+form.completedness input[type="radio"],
+form.sorting label input[type="radio"] {
+  position: absolute;
+  left: 0;
+  top: 0.3125rem;
+}
+
+.list time {
+  display: flex;
+}
+
+.list time span:first-child {
+  width: 6rem;
+}
+
+.list time span + span {
+  width: 1.375rem;
+}
+
+.TodoList.off main {
+  padding-right: 20em;
+  height: 30em;
+  background-image: url('off.svg'), url('off.jpg');
+  background-repeat: no-repeat, no-repeat;
+  background-origin: content-box, padding-box;
+  background-position: right top, right top;
+  background-size: contain, cover;
+}
+
+main {
+  position: relative;
+}
+
+.modalDialog {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 1em;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 10em;
+  color: #ffff00; /* yellow */
+  background-color: hsla(0, 0%, 0%, 0.5); /* 50% black */
+}
+
+.modalDialog button:last-child {
+  position: absolute;
+  right: 1em;
+  bottom: 1em;
+  border-width: 1px;
+  border-radius: 0.25em;
+  border-style: solid;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  color: #ffff00; /* yellow */
+  background-color: #000000; /* black */
+}
+
+.list {
+  margin-left: 0.75rem;
+  padding-top: 0.75rem;
+  line-height: 1.5rem;
+  list-style: none;
+}
+
+.list li {
+  cursor: default;
+}
+
+.list li div {
+  display: flex;
+  align-items: baseline;
+}
+
+.list svg {
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-left: -1.5rem;
+  width: 1rem;
+  height: 0.75rem;
+  margin-right: 0.5rem;
+}
+
+.list li p {
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin-left: 1.5rem;
+}
+
+.list button {
+  flex-grow: 0;
+  flex-shrink: 0;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.25rem;
+  font-family: inherit;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  color: hsl(15, 100%, 60%); /* red-ish */
+  border-color: hsl(15, 100%, 60%); /* red-ish */
+  background-color: hsl(15, 100%, 95%); /* light red-ish */
+}
+
+.adder button,
+.adder input,
+.list li.uncompleted:hover {
+  background-color: hsl(165, 100%, 95%); /* light green-ish */
+}
+
+.list li.completed:hover {
+  background-color: hsl(0, 0%, 95%); /* ligher gray */
+}
+
+.adder input,
+.adder button,
+.uncompleted,
+.completedness label.uncompleted,
+.list li.uncompleted {
+  color: hsl(165, 100%, 25%); /* green-ish */
+}
+
+.completedness label.completed,
+.list li.completed {
+  color: hsl(0, 0%, 80%); /* light gray */
+}
+
+.list.completed li.uncompleted,
+.list.uncompleted li.completed {
+  display: none;
+}
+
+.adder {
+  display: flex;
+  line-height: 1.5em;
+}
+
+.adder input,
+.adder button {
+  color: hsl(165, 100%, 25%); /* green-ish */
+  background-color: hsl(165, 100%, 95%);
+}
+
+.adder input {
+  flex-grow: 1;
+  flex-shrink: 1;
+  max-width: 24em;
+  margin-left: 1rem;
+  padding-left: 0.5em;
+}
+
+.adder button {
+  flex-grow: 0;
+  flex-shrink: 0;
+}
